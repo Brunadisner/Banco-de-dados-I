@@ -1,0 +1,33 @@
+4)select titulo, nome from filme join pessoa on codd=codp; ou
+select f.titulo, p.nome from filme f join pessoa p on codp=codd;
+
+5)Para discobrir o código da pessoa precisa fazer:
+select codp from pessoa where nome='Alfred';
+select f.titulo, p.nome from filme f join pessoa p on codp=101;
+
+8)select f.titulo from filme f join avaliacao a on a.codf=f.codf where nestrelas=5;
+
+9)select f.titulo from filme f join elenco e on e.codf=f.codf  where codp=102;
+ou
+select f.titulo from filme f join elenco e on e.codf=f.codf join pessoa p on 
+p.codp= e.codp where p.codp = 102;
+
+10)select p.nome, f.titulo from pessoa p left join elenco e on e.codp = p.codp left
+join filme f on f.codf = e.codf;
+
+11)select p.nome, f.titulo from pessoa p left join elenco e on e.codp = p.codp left
+join filme f on f.codf = e.codf;
+
+12)select p.nome, f.titulo from pessoa p left join elenco e on e.codp = p.codp left
+join filme f on f.codf = e.codf;
+
+13)select f.titulo, f.dur from filme f where anol=1960;
+
+14)select p.nome from pessoa p join elenco e on p.codp=e.codp join papel pl on 
+pl.codpp=e.codpapel where 
+pl.codpp=5;
+
+15)select email, count(coment) from avaliacao group by 1;
+
+16)select paisn, count(nome) from pessoa group by 1;
+
